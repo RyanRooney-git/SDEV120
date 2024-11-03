@@ -16,8 +16,10 @@ stop
 // in a 30-day month
 
 start
+    input monthRent
+    dailyCost = monthRent / 30
+    output dailyCost
     
-
 stop
 
 // This program accepts a user's monthly pay
@@ -26,3 +28,16 @@ stop
 // (which might be negative)
 // Your program should output the pay and the total bills
 // as well as the remaining discretionary amount
+
+start
+    input monthlyPay
+    input rent
+    input utilities
+    input groceryBills
+    bills = rent + utilities + groceryBills
+    discretionarySpending = monthlyPay - bills
+    output monthlyPay
+    output bills
+    output discretionarySpending
+
+stop
