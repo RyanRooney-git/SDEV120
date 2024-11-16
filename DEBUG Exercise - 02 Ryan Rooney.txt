@@ -1,0 +1,43 @@
+// This pseudocode is intended to display employee net pay values.
+// All employees have a standard $45 deduction from their checks.
+// If an employee does not earn enough to cover the deduction
+// an error message is displayed.
+start
+   Declarations
+      string name
+      num hours
+      num rate
+      string DEDUCTION = 45
+      string EOFNAME = "ZZZ"
+      num gross
+      num net
+   output "Enter first name or ", EOFNAME, " to quit"
+   input name
+   if name not equal to EOFNAME
+      output "Enter hours worked for ", name
+      input hours
+      output "Enter hourly rate for ", name
+      input rate
+      gross = hours * rate
+      net = gross - DEDUCTION
+      while net > 0 then
+         output "Net pay for ", name, " is ", net
+      else
+          output "Deductions not covered. Net is 0."
+      endwhile
+      output "Enter next name or ", EOFNAME, " to quit"
+      input name
+   endif
+   output "End of job"
+stop
+
+Within the declarations, "string DEDUCTION = 45" a string is used but a number is being assigned to the string which is incorrect. it should be "num DEDUCTION = 45". 
+
+During the output "Enter first name or ", EOFNAME, " to quit" the EOFNAME should be within the quotation marks like this: output "Enter first name or EOFNAME to quit"
+
+During the if name not equal to EOFNAME statement, a <> can be used instead of not equal. if name <> to EOFNAME
+
+The final output statement "Enter first name or ", EOFNAME, " also should be changed. output "Enter first name or EOFNAME to quit"
+
+With these changes, the program should work as intended.
+
